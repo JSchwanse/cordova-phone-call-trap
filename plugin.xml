@@ -20,6 +20,14 @@
                 <param name="android-package" value="io.gvox.phonecalltrap.PhoneCallTrap"/>
             </feature>
         </config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<receiver android:name="io.gvox.phonecalltrap.PhoneCallReceiver.java" android:exported="true">
+                <intent-filter>
+                    <action android:name="android.intent.action.PHONE_STATE"/>
+                </intent-filter>
+            </receiver>
+		</config-file>
 
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
