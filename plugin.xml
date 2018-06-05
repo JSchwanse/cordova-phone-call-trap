@@ -33,6 +33,7 @@
             <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
         </config-file>
 
+		<source-file src="src/android/PhoneCallReceiver.java" target-dir="src/io/gvox/phonecalltrap"/>
         <source-file src="src/android/PhoneCallTrap.java" target-dir="src/io/gvox/phonecalltrap"/>
     </platform>
 
