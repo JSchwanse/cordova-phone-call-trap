@@ -21,7 +21,7 @@
             </feature>
         </config-file>
 		
-		<config-file target="AndroidManifest.xml" parent="/manifest">
+		<config-file target="AndroidManifest.xml" parent="/application">
 			<receiver android:name="io.gvox.phonecalltrap.PhoneCallReceiver" android:exported="true">
                 <intent-filter>
                     <action android:name="android.intent.action.PHONE_STATE"/>
