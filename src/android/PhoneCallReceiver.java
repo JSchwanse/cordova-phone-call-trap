@@ -30,7 +30,7 @@ public class PhoneCallReceiver extends BroadcastReceiver {
 		String incomingNumber = intent.getStringExtra(TelephonyManager.EXTRA_INCOMING_NUMBER);
 		
 		// start app with params
-		if (TelephonyManager.getCallState().equals("RINGING")){
+		if (intent.getStringExtra(TelephonyManager.EXTRA_STATE_RINGING)){
 		PackageManager pm = context.getPackageManager();
 		Intent launchIntent = pm.getLaunchIntentForPackage("de.mpssolutions.twin.mobile");
 		launchIntent.putExtra("incoming_number", incomingNumber);
