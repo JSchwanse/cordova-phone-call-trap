@@ -8,7 +8,7 @@ import java.lang.String;
 import android.util.Log;
 import android.widget.Toast;
 import android.telephony.TelephonyManager;
-import android.content.*;
+import android.content.pm.PackageManager;
 //import android.content.pm.PackageManager;
 
 
