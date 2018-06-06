@@ -1,6 +1,8 @@
 Cordova PhoneCall Trap
 =======================
 
+**In this Version it's possible for Android to get wake up by call state change even if application is destroyed
+
 It is a Apache Cordova plugin to simplify handling phone call status and events in Android devices.
 
 
