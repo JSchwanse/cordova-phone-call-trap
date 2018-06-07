@@ -14,8 +14,6 @@ import org.json.JSONObject;
 public class PhoneCallTrap extends CordovaPlugin {
 
     CallStateListener listener;
-	
-	static String incomingNumber = getIntent().getExtras().getString("incoming_number","noNumber");
 
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (callbackContext == null) return true;
