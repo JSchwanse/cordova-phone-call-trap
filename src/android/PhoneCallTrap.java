@@ -47,11 +47,11 @@ class Helper {
     public static String getState(int state) {
         switch (state) {
             case TelephonyManager.CALL_STATE_OFFHOOK:
-                return "OFFHOOK " +incomingNumber ;
+                return "OFFHOOK ";
             case TelephonyManager.CALL_STATE_RINGING:
-                return "RINGING " +incomingNumber ;
+                return "RINGING ";
             default:
-                return "IDLE " +incomingNumber ;
+                return "IDLE ";
         }
     }
 }
