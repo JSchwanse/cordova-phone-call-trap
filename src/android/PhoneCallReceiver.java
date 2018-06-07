@@ -9,7 +9,6 @@ import android.util.Log;
 import android.widget.Toast;
 import android.telephony.TelephonyManager;
 import android.content.pm.PackageManager;
-//import android.content.pm.PackageManager;
 
 
 public class PhoneCallReceiver extends BroadcastReceiver {
