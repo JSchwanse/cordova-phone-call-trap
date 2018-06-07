@@ -14,6 +14,8 @@ import org.json.JSONObject;
 public class PhoneCallTrap extends CordovaPlugin {
 
     CallStateListener listener;
+	
+	
 
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (callbackContext == null) return true;
@@ -24,7 +26,18 @@ public class PhoneCallTrap extends CordovaPlugin {
         } else if ("getCurrentState".equals(action)) {
             TelephonyManager manager = (TelephonyManager) cordova.getActivity().getSystemService(Context.TELEPHONY_SERVICE);
             String msg = Helper.getState(manager.getCallState());
-            PluginResult result = new PluginResult(PluginResult.Status.OK, msg);
+			String incomingNumber = this.cordova.getActivity().getIntent().getExtras().getString("incoming_number");
+		
+			JSONObject callResult = new JSONObject();
+			try {
+				callResult.put("state", msg);
+				callResult.put("number", incomingNumber);
+			}
+			catch(JSONException e){
+				
+			}
+			
+            PluginResult result = new PluginResult(PluginResult.Status.OK, callResult);
             //result.setKeepCallback(true);
             callbackContext.sendPluginResult(result);
         }
